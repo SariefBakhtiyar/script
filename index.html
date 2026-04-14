@@ -6,7 +6,6 @@
   <title>Selfie Live Camera Premium</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #0f172a, #111827);
@@ -17,19 +16,13 @@
       align-items: center;
       padding: 20px;
     }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
+    h1 { font-size: 24px; margin-bottom: 8px; }
     .subtitle {
       color: #94a3b8;
       font-size: 14px;
       margin-bottom: 18px;
       text-align: center;
     }
-
     .camera-wrapper {
       position: relative;
       width: 100%;
@@ -40,14 +33,12 @@
       background: #1e293b;
       box-shadow: 0 0 0 2px rgba(20,184,166,0.4), 0 0 35px rgba(20,184,166,0.25);
     }
-
     video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transform: scaleX(-1);
     }
-
     .premium-frame {
       position: absolute;
       inset: 18px;
@@ -56,7 +47,6 @@
       box-shadow: inset 0 0 20px rgba(20,184,166,0.25), 0 0 18px rgba(20,184,166,0.35);
       pointer-events: none;
     }
-
     .corner {
       position: absolute;
       width: 34px;
@@ -64,12 +54,10 @@
       border: 4px solid #5eead4;
       pointer-events: none;
     }
-
     .tl { top: 28px; left: 28px; border-right: 0; border-bottom: 0; border-radius: 12px 0 0 0; }
     .tr { top: 28px; right: 28px; border-left: 0; border-bottom: 0; border-radius: 0 12px 0 0; }
     .bl { bottom: 28px; left: 28px; border-right: 0; border-top: 0; border-radius: 0 0 0 12px; }
     .br { bottom: 28px; right: 28px; border-left: 0; border-top: 0; border-radius: 0 0 12px 0; }
-
     .camera-text {
       position: absolute;
       bottom: 18px;
@@ -85,7 +73,6 @@
       font-size: 14px;
       backdrop-filter: blur(6px);
     }
-
     .controls {
       margin-top: 18px;
       display: flex;
@@ -93,7 +80,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
     button {
       border: none;
       padding: 12px 18px;
@@ -104,7 +90,15 @@
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(20,184,166,0.25);
     }
-
+    #photoPreview {
+      display: none;
+      margin-top: 18px;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 20px;
+      border: 2px solid rgba(94,234,212,0.5);
+      box-shadow: 0 0 24px rgba(20,184,166,0.2);
+    }
     footer {
       margin-top: 22px;
       color: #94a3b8;
@@ -124,13 +118,11 @@
     <div class="corner tr"></div>
     <div class="corner bl"></div>
     <div class="corner br"></div>
-    <div class="camera-text" id="cameraText">
-      ✨ Kamera aktif — posisikan wajah di dalam frame premium
-    </div>
+    <div class="camera-text" id="cameraText">✨ Kamera aktif — posisikan wajah di dalam frame premium</div>
   </div>
 
   <canvas id="photoCanvas" style="display:none"></canvas>
-  <img id="photoPreview" style="display:none; margin-top:18px; max-width:420px; width:100%; border-radius:20px; border:2px solid rgba(94,234,212,0.5); box-shadow:0 0 24px rgba(20,184,166,0.2);" />
+  <img id="photoPreview" />
 
   <div class="controls">
     <button onclick="capturePhoto()">📸 Ambil Foto</button>
@@ -179,6 +171,7 @@
 
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
+      context.setTransform(1, 0, 0, 1, 0, 0);
 
       if (currentFacingMode === 'user') {
         context.translate(canvas.width, 0);
@@ -186,14 +179,27 @@
       }
 
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
-      preview.src = canvas.toDataURL('image/jpeg', 0.9);
+
+      const imageData = canvas.toDataURL('image/jpeg', 0.9);
+      preview.src = imageData;
       preview.style.display = 'block';
 
-      document.getElementById('cameraText').textContent = '✅ Foto berhasil diambil, silakan lanjut submit buku tamu';
+      if (window.opener) {
+        window.opener.postMessage({
+          type: 'foto',
+          base64: imageData
+        }, '*');
+      }
+
+      document.getElementById('cameraText').textContent =
+        '✅ Foto berhasil dikirim ke Buku Tamu';
+
+      setTimeout(() => window.close(), 1000);
     }
 
     function switchCamera() {
       currentFacingMode = currentFacingMode === 'user' ? 'environment' : 'user';
+      video.style.transform = currentFacingMode === 'user' ? 'scaleX(-1)' : 'scaleX(1)';
       startCamera();
     }
 
