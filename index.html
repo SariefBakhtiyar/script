@@ -31,6 +31,7 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit}
 input,select,textarea{font-family:inherit;outline:none}
 img{max-width:100%}
 
+
 /* ══════════════════════════════════════════════
    SPINNER OVERLAY (ditampilkan saat loading awal)
 ══════════════════════════════════════════════ */
@@ -59,6 +60,7 @@ img{max-width:100%}
 @keyframes spin{to{transform:rotate(360deg)}}
 .spinner-text{font-family:'Syne',sans-serif;font-size:13px;color:var(--text3);letter-spacing:2px;text-transform:uppercase}
 
+
 /* ══════════════════════════════════════════════
    HALAMAN LOGIN
 ══════════════════════════════════════════════ */
@@ -68,6 +70,7 @@ img{max-width:100%}
   overflow:hidden;
 }
 #loginPage.active{display:flex;align-items:center;justify-content:center}
+
 
 /* Background gambar sekolah dengan efek premium */
 .login-bg{
@@ -80,11 +83,13 @@ img{max-width:100%}
 }
 #loginPage:hover .login-bg{transform:scale(1.0)}
 
+
 /* Overlay gradient di atas background */
 .login-overlay{
   position:absolute;inset:0;
   background:linear-gradient(160deg,rgba(4,15,15,.7) 0%,rgba(10,74,74,.4) 50%,rgba(4,15,15,.8) 100%);
 }
+
 
 /* Card login glassmorphism */
 .login-card{
@@ -100,6 +105,7 @@ img{max-width:100%}
 }
 @keyframes cardIn{from{opacity:0;transform:translateY(32px) scale(.96)}to{opacity:1;transform:none}}
 
+
 .login-header{text-align:center;margin-bottom:32px}
 .school-logo{
   width:80px;height:80px;border-radius:12px;
@@ -110,6 +116,7 @@ img{max-width:100%}
 .login-school{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--teal-300);letter-spacing:.5px}
 .login-tagline{font-size:11px;color:var(--text3);margin-top:3px;font-style:italic}
 .login-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-top:16px}
+
 
 .form-group{margin-bottom:18px;position:relative}
 .form-label{display:block;font-size:12px;font-weight:600;color:var(--text3);margin-bottom:7px;text-transform:uppercase;letter-spacing:.8px}
@@ -124,6 +131,7 @@ img{max-width:100%}
 .form-input:focus{border-color:var(--teal-400);box-shadow:0 0 0 3px rgba(26,173,173,.15)}
 .form-input::placeholder{color:var(--text3);opacity:.6}
 .input-icon{position:absolute;left:14px;top:50%;transform:translateY(50%);color:var(--text3);font-size:16px;pointer-events:none}
+
 
 .btn-login{
   width:100%;padding:14px;margin-top:6px;
@@ -143,13 +151,16 @@ img{max-width:100%}
 .btn-login:active{transform:translateY(0)}
 .btn-login:disabled{opacity:.5;pointer-events:none}
 
+
 .login-footer-text{text-align:center;font-size:11px;color:var(--text3);margin-top:24px}
+
 
 /* ══════════════════════════════════════════════
    LAYOUT DASHBOARD
 ══════════════════════════════════════════════ */
 #dashboardPage{display:none}
 #dashboardPage.active{display:flex;flex-direction:column;min-height:100vh}
+
 
 /* Topbar */
 .topbar{
@@ -181,8 +192,10 @@ img{max-width:100%}
 }
 .btn-logout:hover{background:rgba(255,80,80,.2);border-color:#ff6060}
 
+
 /* Konten utama */
 .main-content{flex:1;padding:24px;max-width:1400px;width:100%;margin:0 auto}
+
 
 /* Kartu statistik */
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:28px}
@@ -200,6 +213,7 @@ img{max-width:100%}
 .stat-icon{font-size:28px;margin-bottom:10px}
 .stat-value{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--teal-300)}
 .stat-label{font-size:12px;color:var(--text3);margin-top:4px;font-weight:500}
+
 
 /* Panel aksi atas tabel */
 .table-panel{
@@ -233,6 +247,7 @@ img{max-width:100%}
   transition:all var(--transition);white-space:nowrap;
 }
 .btn-tambah:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(26,173,173,.45)}
+
 
 /* Tabel data */
 .table-wrap{overflow-x:auto}
@@ -275,10 +290,12 @@ td .cell-time{font-size:11px;color:var(--text3)}
 .btn-del{background:rgba(255,80,80,.1);border:1px solid rgba(255,80,80,.2);color:#ff8080}
 .btn-del:hover{background:rgba(255,80,80,.2);border-color:#ff6060}
 
+
 /* State kosong */
 .empty-state{padding:56px 20px;text-align:center}
 .empty-icon{font-size:48px;margin-bottom:12px;opacity:.4}
 .empty-text{color:var(--text3);font-size:14px}
+
 
 /* Footer */
 .app-footer{
@@ -288,6 +305,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   background:var(--dark2);
 }
 .app-footer span{color:var(--teal-400)}
+
 
 /* ══════════════════════════════════════════════
    MODAL (Upload, Edit, Lihat Foto)
@@ -315,6 +333,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   transition:all var(--transition);
 }
 .modal-close:hover{background:rgba(255,80,80,.15);border-color:#ff6060;color:#ff8080}
+
 
 /* Drop zone upload foto */
 .drop-zone{
@@ -375,6 +394,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
 .btn-submit:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(26,173,173,.45)}
 .btn-submit:disabled{opacity:.4;pointer-events:none}
 
+
 /* Modal lihat foto */
 .modal-foto-wrap{text-align:center}
 .modal-foto-wrap img{
@@ -386,6 +406,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   padding:6px 10px;background:rgba(10,74,74,.2);border-radius:6px}
 .foto-meta-key{color:var(--text3);font-weight:600}
 .foto-meta-val{color:var(--text2)}
+
 
 /* ══════════════════════════════════════════════
    TOAST NOTIFIKASI
@@ -406,11 +427,13 @@ td .cell-time{font-size:11px;color:var(--text3)}
 .toast.info{background:linear-gradient(135deg,var(--surface2),var(--surface3));border:1px solid rgba(26,173,173,.2);color:var(--text2)}
 .toast-icon{font-size:17px}
 
+
 /* ══════════════════════════════════════════════
    KONFIRMASI HAPUS
 ══════════════════════════════════════════════ */
 .confirm-text{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:20px}
 .confirm-id{font-family:monospace;font-size:12px;background:rgba(255,80,80,.1);color:#ff8080;padding:2px 8px;border-radius:4px}
+
 
 /* ══════════════════════════════════════════════
    BADGE STATUS AUTO-REFRESH
@@ -423,6 +446,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
 }
 .refresh-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-400);animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
 
 /* ══════════════════════════════════════════════
    RESPONSIF
@@ -442,6 +466,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
 </head>
 <body>
 
+
 <!-- ─── SPINNER AWAL ─────────────────────────────────── -->
 <div id="spinnerOverlay">
   <img src="https://github.com/SariefBakhtiyar/logoku/blob/main/ixia%20transparan.png?raw=true"
@@ -449,6 +474,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   <div class="spinner-ring"></div>
   <div class="spinner-text">Memuat Aplikasi…</div>
 </div>
+
 
 <!-- ─── HALAMAN LOGIN ─────────────────────────────────── -->
 <div id="loginPage">
@@ -483,8 +509,10 @@ td .cell-time{font-size:11px;color:var(--text3)}
   </div>
 </div>
 
+
 <!-- ─── DASHBOARD ─────────────────────────────────────── -->
 <div id="dashboardPage">
+
 
   <!-- Topbar -->
   <div class="topbar">
@@ -508,8 +536,10 @@ td .cell-time{font-size:11px;color:var(--text3)}
     </div>
   </div>
 
+
   <!-- Konten -->
   <div class="main-content">
+
 
     <!-- Kartu statistik -->
     <div class="stats-row">
@@ -529,6 +559,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
         <div class="stat-label">Penginput Aktif</div>
       </div>
     </div>
+
 
     <!-- Panel tabel -->
     <div class="table-panel">
@@ -563,10 +594,13 @@ td .cell-time{font-size:11px;color:var(--text3)}
       </div>
     </div>
 
+
   </div><!-- /main-content -->
+
 
   <div class="app-footer">© 2026 | <span>IXIA Digital Solution</span> — Aplikasi Upload Foto V26.1</div>
 </div>
+
 
 <!-- ─── MODAL UPLOAD ──────────────────────────────────── -->
 <div class="modal-backdrop" id="modalUpload">
@@ -576,10 +610,12 @@ td .cell-time{font-size:11px;color:var(--text3)}
       <button class="modal-close" onclick="closeModal('modalUpload')">✕</button>
     </div>
 
+
     <div class="modal-field">
       <label class="modal-label">Nama Penginput <span style="color:#ff8080">*</span></label>
       <input type="text" class="modal-input" id="uploadNama" placeholder="Masukkan nama Anda"/>
     </div>
+
 
     <div class="drop-zone" id="dropZone">
       <input type="file" id="fileInput" accept="image/*" onchange="onFileSelected(this)"/>
@@ -588,10 +624,12 @@ td .cell-time{font-size:11px;color:var(--text3)}
     </div>
     <img id="previewImg" class="preview-img" src="" alt="" style="display:none"/>
 
+
     <div class="modal-field">
       <label class="modal-label">Nama File <span style="color:#ff8080">*</span></label>
       <input type="text" class="modal-input" id="uploadNamaFile" placeholder="Contoh: Foto Kelas XII MPLB"/>
     </div>
+
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       <div class="modal-field">
@@ -604,9 +642,11 @@ td .cell-time{font-size:11px;color:var(--text3)}
       </div>
     </div>
 
+
     <div class="progress-bar-wrap" id="progressWrap">
       <div class="progress-bar" id="progressBar"></div>
     </div>
+
 
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal('modalUpload')">Batal</button>
@@ -616,6 +656,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
     </div>
   </div>
 </div>
+
 
 <!-- ─── MODAL EDIT ─────────────────────────────────────── -->
 <div class="modal-backdrop" id="modalEdit">
@@ -640,6 +681,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   </div>
 </div>
 
+
 <!-- ─── MODAL LIHAT FOTO ──────────────────────────────── -->
 <div class="modal-backdrop" id="modalFoto">
   <div class="modal" style="max-width:600px">
@@ -663,6 +705,7 @@ td .cell-time{font-size:11px;color:var(--text3)}
   </div>
 </div>
 
+
 <!-- ─── MODAL KONFIRMASI HAPUS ─────────────────────────── -->
 <div class="modal-backdrop" id="modalHapus">
   <div class="modal" style="max-width:400px">
@@ -684,8 +727,10 @@ td .cell-time{font-size:11px;color:var(--text3)}
   </div>
 </div>
 
+
 <!-- ─── TOAST CONTAINER ───────────────────────────────── -->
 <div id="toastContainer"></div>
+
 
 <script>
 // ═══════════════════════════════════════════════════════
@@ -697,6 +742,7 @@ var fileBase64    = "";      // Base64 file yang akan diupload
 var fileMime      = "";      // MIME type file
 var refreshTimer  = null;    // Interval auto-refresh
 var REFRESH_INTERVAL = 30000; // 30 detik
+
 
 // ═══════════════════════════════════════════════════════
 // INIT — Cek session, tampilkan halaman yang sesuai
@@ -712,9 +758,11 @@ window.onload = function() {
     }
   }, 1800);
 
+
   // Ticker tanggal/jam pada modal upload
   setInterval(updateAutoFields, 1000);
   updateAutoFields();
+
 
   // Enter untuk login
   document.getElementById('inputPass').addEventListener('keydown', function(e) {
@@ -724,6 +772,7 @@ window.onload = function() {
     if (e.key === 'Enter') document.getElementById('inputPass').focus();
   });
 };
+
 
 // ═══════════════════════════════════════════════════════
 // HELPER: Tanggal & Jam untuk form upload
@@ -739,19 +788,23 @@ function updateAutoFields() {
   if (el2) el2.textContent = jam;
 }
 
+
 // ═══════════════════════════════════════════════════════
 // LOGIN
 // ═══════════════════════════════════════════════════════
 document.getElementById('btnLogin').addEventListener('click', doLogin);
+
 
 function doLogin() {
   var u = document.getElementById('inputUser').value.trim();
   var p = document.getElementById('inputPass').value;
   if (!u || !p) { showToast('Username dan password wajib diisi.', 'error'); return; }
 
+
   var btn = document.getElementById('btnLogin');
   btn.textContent = '⏳ Memeriksa…';
   btn.disabled = true;
+
 
   google.script.run
     .withSuccessHandler(function(res) {
@@ -773,6 +826,7 @@ function doLogin() {
     .checkLogin(u, p);
 }
 
+
 // ═══════════════════════════════════════════════════════
 // DASHBOARD — Tampilkan & muat data
 // ═══════════════════════════════════════════════════════
@@ -782,6 +836,7 @@ function showDashboard() {
   startAutoRefresh();
 }
 
+
 function logout() {
   sessionStorage.removeItem('app_loggedIn');
   stopAutoRefresh();
@@ -790,12 +845,14 @@ function logout() {
   showToast('Anda telah keluar.', 'info');
 }
 
+
 // ═══════════════════════════════════════════════════════
 // LOAD DATA — Ambil semua data dari Apps Script
 // ═══════════════════════════════════════════════════════
 function loadData(showMsg) {
   var btn = document.getElementById('btnRefresh');
   btn.classList.add('spinning');
+
 
   google.script.run
     .withSuccessHandler(function(data) {
@@ -814,6 +871,7 @@ function loadData(showMsg) {
     .getAllData();
 }
 
+
 // ═══════════════════════════════════════════════════════
 // AUTO-REFRESH setiap 30 detik
 // ═══════════════════════════════════════════════════════
@@ -831,6 +889,7 @@ function updateRefreshTime() {
     'Update ' + pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
 }
 
+
 // ═══════════════════════════════════════════════════════
 // STATISTIK
 // ═══════════════════════════════════════════════════════
@@ -843,6 +902,7 @@ function loadStats() {
     })
     .getStats();
 }
+
 
 // ═══════════════════════════════════════════════════════
 // RENDER TABEL
@@ -876,12 +936,14 @@ function renderTable(data) {
   tbody.innerHTML = html;
 }
 
+
 // Escape HTML untuk mencegah XSS pada data user
 function escHtml(str) {
   return String(str || '')
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
     .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
 }
+
 
 // ═══════════════════════════════════════════════════════
 // PENCARIAN / FILTER TABEL
@@ -900,11 +962,13 @@ function filterTable() {
   renderTable(filteredData);
 }
 
+
 // ═══════════════════════════════════════════════════════
 // MODAL HELPERS
 // ═══════════════════════════════════════════════════════
 function openModal(id) { document.getElementById(id).classList.add('active'); }
 function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
 
 // Tutup modal dengan klik backdrop
 ['modalUpload','modalEdit','modalFoto','modalHapus'].forEach(function(id) {
@@ -912,6 +976,7 @@ function closeModal(id) { document.getElementById(id).classList.remove('active')
     if (e.target === this) closeModal(id);
   });
 });
+
 
 // ═══════════════════════════════════════════════════════
 // MODAL UPLOAD
@@ -927,6 +992,7 @@ function openUploadModal() {
   openModal('modalUpload');
 }
 
+
 // Drag & drop
 var dz = document.getElementById('dropZone');
 dz.addEventListener('dragover', function(e){ e.preventDefault(); dz.classList.add('drag-over'); });
@@ -937,9 +1003,11 @@ dz.addEventListener('drop', function(e){
   if (file) processFile(file);
 });
 
+
 function onFileSelected(input) {
   if (input.files && input.files[0]) processFile(input.files[0]);
 }
+
 
 // ── processFile ──────────────────────────────────────────────
 // FIX: Gambar dikompres via Canvas menjadi JPEG max 1200px / quality 0.82
@@ -948,6 +1016,7 @@ function onFileSelected(input) {
 //   2. Output selalu JPEG (mime image/jpeg) — format paling stabil di Drive
 //   3. Base64 yang dihasilkan bersih tanpa prefix "data:...;base64,"
 var fileNamaAsli = ""; // simpan nama asli file untuk ekstensi
+
 
 function processFile(file) {
   if (!file.type.startsWith('image/')) {
@@ -960,13 +1029,16 @@ function processFile(file) {
     return;
   }
 
+
   fileNamaAsli = file.name;
   showToast('⏳ Memproses foto…', 'info');
+
 
   var reader = new FileReader();
   reader.onload = function(e) {
     var img = new Image();
     img.onload = function() {
+
 
       // ── Kompresi via Canvas ────────────────────────────────
       var MAX_DIM  = 1200;   // Sisi terpanjang maks 1200px
@@ -974,10 +1046,12 @@ function processFile(file) {
       var w = img.width;
       var h = img.height;
 
+
       if (w > MAX_DIM || h > MAX_DIM) {
         if (w >= h) { h = Math.round(h * MAX_DIM / w); w = MAX_DIM; }
         else        { w = Math.round(w * MAX_DIM / h); h = MAX_DIM; }
       }
+
 
       var canvas = document.createElement('canvas');
       canvas.width  = w;
@@ -985,8 +1059,10 @@ function processFile(file) {
       var ctx = canvas.getContext('2d');
       ctx.drawImage(img, 0, 0, w, h);
 
+
       // Selalu output sebagai JPEG agar konsisten
       var dataUrl = canvas.toDataURL('image/jpeg', QUALITY);
+
 
       // Strip prefix "data:image/jpeg;base64," → ambil hanya string base64 murni
       var commaIdx = dataUrl.indexOf(',');
@@ -995,8 +1071,10 @@ function processFile(file) {
         return;
       }
 
+
       fileBase64 = dataUrl.substring(commaIdx + 1);
       fileMime   = 'image/jpeg';
+
 
       // Validasi dasar: base64 valid pasti panjang dan berisi karakter A-Z a-z 0-9 + / =
       if (fileBase64.length < 100) {
@@ -1005,10 +1083,12 @@ function processFile(file) {
         return;
       }
 
+
       // Preview
       var prev = document.getElementById('previewImg');
       prev.src = dataUrl;
       prev.style.display = 'block';
+
 
       // Isi nama file otomatis (tanpa ekstensi asli)
       if (!document.getElementById('uploadNamaFile').value) {
@@ -1016,33 +1096,41 @@ function processFile(file) {
           fileNamaAsli.replace(/\.[^/.]+$/, '');
       }
 
+
       // Hitung ukuran akhir untuk info user
       var sizeKB = Math.round(fileBase64.length * 0.75 / 1024);
       showToast('Foto siap (' + w + 'x' + h + 'px, ~' + sizeKB + ' KB)', 'info');
     };
 
+
     img.onerror = function() { showToast('Gagal membaca gambar.', 'error'); };
     img.src = e.target.result;
   };
+
 
   reader.onerror = function() { showToast('Gagal membaca file.', 'error'); };
   reader.readAsDataURL(file);
 }
 
+
 function submitUpload() {
   var nama     = document.getElementById('uploadNama').value.trim();
   var namaFile = document.getElementById('uploadNamaFile').value.trim();
+
 
   if (!nama)      { showToast('Nama penginput wajib diisi.', 'error'); return; }
   if (!namaFile)  { showToast('Nama file wajib diisi.', 'error'); return; }
   if (!fileBase64){ showToast('Pilih foto terlebih dahulu.', 'error'); return; }
 
+
   // Nama file yang dikirim ke Drive selalu berekstensi .jpg (karena output canvas JPEG)
   var namaFileDrive = namaFile.replace(/\.[^/.]+$/, '') + '.jpg';
+
 
   var btn = document.getElementById('btnUpload');
   btn.disabled = true;
   btn.innerHTML = '<span>⏳ Mengupload…</span>';
+
 
   var pw = document.getElementById('progressWrap');
   var pb = document.getElementById('progressBar');
@@ -1053,12 +1141,14 @@ function submitUpload() {
     pb.style.width = prog + '%';
   }, 300);
 
+
   google.script.run
     .withSuccessHandler(function(res) {
       clearInterval(ticker);
       pb.style.width = '100%';
       btn.disabled = false;
       btn.innerHTML = '<span>☁️ Upload Sekarang</span>';
+
 
       if (res.success) {
         closeModal('modalUpload');
@@ -1081,6 +1171,7 @@ function submitUpload() {
     .uploadFoto(fileBase64, fileMime, namaFileDrive, nama);
 }
 
+
 // ═══════════════════════════════════════════════════════
 // MODAL EDIT
 // ═══════════════════════════════════════════════════════
@@ -1091,11 +1182,13 @@ function openEdit(id, nama, namaFile) {
   openModal('modalEdit');
 }
 
+
 function submitEdit() {
   var id       = document.getElementById('editId').value;
   var nama     = document.getElementById('editNama').value.trim();
   var namaFile = document.getElementById('editNamaFile').value.trim();
   if (!nama || !namaFile) { showToast('Semua field wajib diisi.', 'error'); return; }
+
 
   google.script.run
     .withSuccessHandler(function(res) {
@@ -1109,6 +1202,7 @@ function submitEdit() {
     .editData(id, nama, namaFile);
 }
 
+
 // ═══════════════════════════════════════════════════════
 // MODAL LIHAT FOTO
 // ═══════════════════════════════════════════════════════
@@ -1116,9 +1210,11 @@ function openFoto(id) {
   var row = allData.filter(function(r){ return r['ID'] === id; })[0];
   if (!row) return;
 
+
   document.getElementById('fotoLarge').src     = row['URL Foto'] || '';
   document.getElementById('fotoDownloadLink').href =
     'https://drive.google.com/file/d/' + row['File ID'] + '/view';
+
 
   var meta = document.getElementById('fotoMeta');
   meta.innerHTML =
@@ -1128,11 +1224,13 @@ function openFoto(id) {
     metaRow('Jam', row['Jam']) +
     metaRow('ID', row['ID']);
 
+
   openModal('modalFoto');
 }
 function metaRow(k, v) {
   return '<div class="foto-meta-row"><span class="foto-meta-key">' + escHtml(k) + '</span><span class="foto-meta-val">' + escHtml(v) + '</span></div>';
 }
+
 
 // ═══════════════════════════════════════════════════════
 // MODAL HAPUS
@@ -1142,6 +1240,7 @@ function openHapus(id) {
   document.getElementById('hapusIdLabel').textContent = id;
   openModal('modalHapus');
 }
+
 
 function submitHapus() {
   var id = document.getElementById('hapusId').value;
@@ -1157,6 +1256,7 @@ function submitHapus() {
     .hapusData(id);
 }
 
+
 // ═══════════════════════════════════════════════════════
 // TOAST NOTIFIKASI PREMIUM
 // ═══════════════════════════════════════════════════════
@@ -1168,6 +1268,7 @@ function showToast(msg, type) {
   el.innerHTML = '<span class="toast-icon">' + (icons[type] || 'ℹ️') + '</span><span>' + escHtml(msg) + '</span>';
   container.appendChild(el);
 
+
   // Hapus otomatis setelah 3.5 detik
   setTimeout(function() {
     el.classList.add('out');
@@ -1177,3 +1278,4 @@ function showToast(msg, type) {
 </script>
 </body>
 </html>
+
